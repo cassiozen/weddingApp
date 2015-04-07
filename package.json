@@ -11,6 +11,7 @@
   "dependencies": {
     "classnames": "^1.0.0",
     "react": "^0.13.1",
+    "react-canvas": "0.0.1",
     "react-tappable": "^0.2.5",
     "superagent": "^0.21.0",
     "touchstonejs": "^0.1.2",

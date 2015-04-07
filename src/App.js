@@ -3,6 +3,7 @@ var React = require('react/addons');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var classnames = require('classnames');
 var Touchstone = require('touchstonejs');
+var TouchEmulator = require('./libs/touch-emulator')
 
 
 var views = {
@@ -61,6 +62,7 @@ function onDeviceReady() {
 
 if (typeof cordova === 'undefined') {
   startApp();
+  TouchEmulator();
 } else {
   document.addEventListener('deviceready', onDeviceReady, false);
 }

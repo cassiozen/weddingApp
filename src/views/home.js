@@ -76,10 +76,12 @@ module.exports = React.createClass({
         <UI.FlexBlock className="base-view">
           <div style={style}>
             <canvas id="particles-canvas" ref="canvas" style={canvasStyle}></canvas>
-            <img src="img/nhamas.png" width="345" style={canvasStyle} />
-            
+            <img src="img/nhamas.png" width="345" style={canvasStyle} />            
           </div>
         </UI.FlexBlock>
+        <Link component="div" to="sponsors" viewTransition="show-from-right">
+          Sponsors
+        </Link>
         
       </UI.FlexLayout>
     );
