@@ -1,0 +1,29 @@
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Eclipse / ADT #
+*.apk
+*.ap_
+*.dex
+*.cache
+.settings
+*.java.d
+local.properties
+bin
+
+# Java
+*.class
+
+# Xcode #
+*~.nib
+xcuserdata
+
+# Node installed modules #
+node_modules
