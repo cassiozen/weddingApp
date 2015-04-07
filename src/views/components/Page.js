@@ -70,7 +70,7 @@ var Page = React.createClass({
   },
 
   getImageHeight: function () {
-    return Math.round(this.props.height * 0.5);
+    return Math.round(this.props.height * 0.4);
   },
 
   getImageStyle: function () {
@@ -89,8 +89,8 @@ var Page = React.createClass({
       top: this.getImageHeight() + CONTENT_INSET,
       left: CONTENT_INSET,
       width: this.props.width - 2 * CONTENT_INSET,
-      fontSize: 18,
-      lineHeight: 25,
+      fontSize: 15,
+      lineHeight: 15,
       fontFace: FontFace('Avenir Next Condensed, Helvetica, sans-serif', null, {weight: 500})
     };
   },
@@ -100,7 +100,7 @@ var Page = React.createClass({
       left: CONTENT_INSET,
       width: this.props.width - 2 * CONTENT_INSET,
       fontFace: FontFace('Georgia, serif'),
-      fontSize: 13,
+      fontSize: 12,
       lineHeight: 19
     };
   },
