@@ -17,12 +17,11 @@ module.exports = React.createClass({
         particlesContext = particlesCanvas.getContext("2d");
     }
     particlesCanvas.width = 345;
-    particlesCanvas.height = 200;
+    particlesCanvas.height = 340;
     // genarate particles
     Particles.init(particlesContext,{
         count: 150,
-        clip: [[20,0],[325, 0],[328, 10],[333, 17],[345, 21],[345, 365],[333, 369],[327, 376],[325, 385],[20, 385],[18, 376],[13, 369],[0, 365],[0, 21],[13, 17],[18, 9]],
-        clipImg: "img/mask.png",
+        clip: [[20,0],[325, 0],[328, 10],[333, 17],[345, 21],[345, 435],[333, 439],[327, 446],[325, 455],[20, 455],[18, 446],[13, 439],[0, 435],[0, 21],[13, 17],[18, 9]],
         particleSprites: {
             "url": "img/hearts.png",
             "count": 3,
@@ -56,10 +55,10 @@ module.exports = React.createClass({
 
   render() {
     style={
-      height: '385px',
+      height: '455px',
       width: '345px',
       background: 'url("img/insert.png")',
-      backgroundSize: '345px 385px',
+      backgroundSize: '345px 455px',
       margin: 'auto',
       position: 'relative'
     };

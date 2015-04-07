@@ -101,7 +101,7 @@ var Page = React.createClass({
       width: this.props.width - 2 * CONTENT_INSET,
       fontFace: FontFace('Georgia, serif'),
       fontSize: 12,
-      lineHeight: 19
+      lineHeight: 20
     };
   },
 
