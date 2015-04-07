@@ -10,7 +10,7 @@ module.exports = React.createClass({
   mixins: [Navigation],
 
 
-  render: function() {
+  render() {
 
     return (
       <UI.FlexLayout className={this.props.viewClassName}>

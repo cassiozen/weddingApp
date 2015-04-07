@@ -9,7 +9,7 @@ var React = require('react'),
 module.exports = React.createClass({
   mixins: [Navigation],
 
-  createParticles: function() {
+  createParticles() {
     // preparing the elements we'll need further
     var particlesCanvas = React.findDOMNode(this.refs.canvas);
     var particlesContext;
@@ -46,15 +46,15 @@ module.exports = React.createClass({
     ParticleAnimation.start();
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.createParticles();
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     ParticleAnimation.removeFrameRenderers();
   },
 
-  render: function() {
+  render() {
     style={
       height: '385px',
       width: '345px',

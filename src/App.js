@@ -14,7 +14,7 @@ var views = {
 var App = React.createClass({
   mixins: [Touchstone.createApp(views)],
 
-  getInitialState: function() {
+  getInitialState() {
     var initialState = {
       currentView: 'home',
       online: true,
@@ -24,17 +24,17 @@ var App = React.createClass({
     return initialState;
   },
 
-  getViewProps: function() {
+  getViewProps() {
     return {
       online: this.state.online
     };
   },
   
-  gotoDefaultView: function() {
+  gotoDefaultView() {
     this.showView('home', 'fade');
   },
 
-  render: function() {
+  render() {
     var appWrapperClassName = classnames({
       'app-wrapper': true,
       'is-native-app': this.state.isNativeApp
