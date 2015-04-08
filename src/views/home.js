@@ -62,7 +62,9 @@ module.exports = React.createClass({
   },
 
   onLeftNavChange(e, key, payload) {
-    this.showView(payload.route, "fade");
+    state = {}
+    state[payload.route  + '_class'] = "view " + payload.route;
+    this.showView(payload.route, "fade", null, state);
   },
 
   render() {
@@ -90,7 +92,7 @@ module.exports = React.createClass({
     };
 
     menuItems = [
-      { route: 'home', text: 'Local da Festa e Traje', number: '❯'},
+      { route: 'locationcostume', text: 'Local da Festa e Traje', number: '❯'},
       { route: 'home', text: 'RSVP', number: '❯' },
       { route: 'home', text: 'Lista de Presentes', number: '❯' },
       { route: 'sponsors', text: 'Pais & Padrinhos', number: '❯' },

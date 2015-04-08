@@ -10,7 +10,8 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 var views = {
   // app
   'home': require('./views/home'),
-  'sponsors': require('./views/sponsors')
+  'sponsors': require('./views/sponsors'),
+  'locationcostume': require('./views/locationcostume'),
 };
 
 var App = React.createClass({
