@@ -3,7 +3,8 @@ var React = require('react/addons');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var classnames = require('classnames');
 var Touchstone = require('touchstonejs');
-var TouchEmulator = require('./libs/touch-emulator')
+var TouchEmulator = require('./libs/touch-emulator');
+var injectTapEventPlugin = require("react-tap-event-plugin");
 
 
 var views = {
@@ -52,6 +53,7 @@ var App = React.createClass({
 });
 
 function startApp() {
+  injectTapEventPlugin();
   React.render(<App />, document.body);
 }
 

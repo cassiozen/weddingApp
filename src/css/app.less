@@ -1,17 +1,74 @@
-// 
-// App
-// ==============================
-
-
-
-
+/*
+ * 
+ * Ionicons 
+ *
+ */
 @import "ionicons/ionicons.less";
-@import "../../node_modules/touchstonejs/less/touchstone.less";
 
+/* 
+ * 
+ * Touchstone 
+ *
+ */
+@import "../../node_modules/touchstonejs/less/variables.less";
+@import "../../node_modules/touchstonejs/less/mixins.less";
+
+// Touchstone Variable overrides
+@app-primary:                   @red; // red
+@red:                           #f44336;
+
+// Touchstone Core
+@import "../../node_modules/touchstonejs/less/core/normalize.less";
+@import "../../node_modules/touchstonejs/less/core/scaffolding.less";
+@import "../../node_modules/touchstonejs/less/core/type.less";
+@import "../../node_modules/touchstonejs/less/core/utilities.less";
+@import "../../node_modules/touchstonejs/less/core/animations.less";
+@import "../../node_modules/touchstonejs/less/core/forms.less";
+@import "../../node_modules/touchstonejs/less/core/grid.less";
+@import "../../node_modules/touchstonejs/less/core/layout.less";
+@import "../../node_modules/touchstonejs/less/core/view.less";
+
+// Touchstone Components
+@import "../../node_modules/touchstonejs/less/components/bars.less";
+@import "../../node_modules/touchstonejs/less/components/headerbar.less";
+
+
+/* 
+ *
+ * material-ui 
+ *
+ */
+@import "../../node_modules/material-ui/src/less/scaffolding.less";
+// Material UI Variable overrides
+@left-nav-color: #d8383b;
+@menu-background-color: #d8383b;
+@import "../../node_modules/material-ui/src/less/components.less";
+
+/* 
+ *
+ * Custom base styles
+ *
+ */
 .base-view{
   background: url("../img/bg_circles.png");
   background-size: 26px 25px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.mui-left-nav .mui-left-nav-menu{
+  background: url("../img/bg_circles.png");
+  background-size: 20px 19px;
+}
+
+.mui-left-nav .mui-left-nav-menu .mui-menu .mui-menu-item {
+  color: #fff;
+  font-size: 18px;
+  border-top: solid 1px;
+  height: 55px;
+  line-height: 55px;
+  &:last-child {
+    border-bottom: solid 1px;
+  }
 }

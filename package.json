@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^1.0.0",
+    "material-ui": "^0.7.3",
     "react": "^0.13.1",
     "react-canvas": "0.0.1",
+    "react-tap-event-plugin": "^0.1.6",
     "react-tappable": "^0.2.5",
     "superagent": "^0.21.0",
     "touchstonejs": "^0.1.2",
