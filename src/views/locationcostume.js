@@ -19,14 +19,6 @@ module.exports = React.createClass({
       width: '325px',
       margin:'auto',
     };
-    redText = {
-      fontSize: '16px',
-      color: '#d8383b'
-    }
-    blueText = {
-      fontSize: '16px',
-      color: '#3c7fad'
-    }
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
         <UI.Headerbar label="Local da Festa e Traje" className="red">
@@ -35,13 +27,13 @@ module.exports = React.createClass({
         <UI.FlexBlock scrollable={true}>
           <div style={headerStyle}><img src="img/location_costume/header_location.png" style={headerImageStyle} width="325" /></div>
           <div style={{textAlign:'center', marginBottom:'18px'}}>
-            <span style={redText}>Estação Lounge</span><br/>
-            <span style={blueText}>Estrada José Matias de Camargo, 715<br />Embu das Artes, SP</span>
+            <span className="red-text">Estação Lounge</span><br/>
+            <span className="blue-text">Estrada José Matias de Camargo, 715<br />Embu das Artes, SP</span>
           </div>
           <div style={headerStyle}><img src="img/location_costume/map.png" style={headerImageStyle} width="325" /></div>
           <div style={{padding: '10px'}}>
-            <span style={redText}>Como chegar na Estação Lounge</span><br/>
-            <div style={blueText}>
+            <span className="red-text">Como chegar na Estação Lounge</span><br/>
+            <div className="blue-text">
               <p>O Waze sabe chegar lá mas ele não é muito bom com números e acaba passando do local: Preste atenção ;)</p>
               <p>Pra quem vem de São Paulo, o melhor caminho é vir pela Rod. Raposo Tavares até a saída do km 25,9. Observe a placa que indicará Retorno / Embu / Jd da Glória. Atravesse o viaduto por cima da Raposo seguindo a placa Embu / Colégio Arautos.</p>
               <p>Após o Assaí, entre a direita e suba. No final da subida entre à esquerda e você estará na Estrada do Capuava. Siga sempre nessa estrada e não se preocupe, pois ela mudará de nome umas duas vezes. </p>
@@ -54,13 +46,13 @@ module.exports = React.createClass({
               <p>4.000 m - Vila de casas simples</p>
               <p>4.600 m - Escola E. Bairro do Capuava <br/>(início das subidas)</p>
               <p>5.300 m - Sítio Golden Trip</p>
-              <p>5.400 m - Centro da terceira idade</p>
+              <p>5.400 m - Centro da terceira idade (não, não vamos casar no centro da terceira idade. Siga mais um pouco...)</p>
               <p>5.600 m - a sua direita verá um muro branco e um banner indicativo do número 715 em vermelho</p>
             </div>
           </div>
           <div style={headerStyle}><img src="img/location_costume/header_costume.png" style={headerImageStyle} width="325" /></div>
           <div style={{textAlign:'center', marginBottom:'18px'}}>
-            <span style={redText}>Social Completo</span><br/>
+            <span className="red-text">Social Completo</span><br/>
           </div>
         </UI.FlexBlock>
         
