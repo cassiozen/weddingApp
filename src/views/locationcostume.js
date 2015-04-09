@@ -42,9 +42,10 @@ module.exports = React.createClass({
           <div style={{padding: '10px'}}>
             <span style={redText}>Como chegar na Estação Lounge</span><br/>
             <div style={blueText}>
-              <p>Vir pela Rod. Raposo Tavares até a saída do km 25,9. Observar a placa que indicará Retorno, Embu, Jd da Glória. Atravesse o viaduto por cima da Raposo seguindo a placa Embu, Colégio Arautos.</p>
-              <p>Após o Assaí, entre a direita e suba. No final da subida entre a esquerda e você estará na Estrada do Capuava. Siga sempre nessa estrada e não se preocupe, pois ela mudará de nome umas duas vezes. </p>
-              <p>Serão quase 6 km até o local. Zere o marcador de quilometragem no início da estrada do Capuava e siga as seguinte referências:</p>
+              <p>O Waze sabe chegar lá mas ele não é muito bom com números e acaba passando do local: Preste atenção ;)</p>
+              <p>Pra quem vem de São Paulo, o melhor caminho é vir pela Rod. Raposo Tavares até a saída do km 25,9. Observe a placa que indicará Retorno / Embu / Jd da Glória. Atravesse o viaduto por cima da Raposo seguindo a placa Embu / Colégio Arautos.</p>
+              <p>Após o Assaí, entre a direita e suba. No final da subida entre à esquerda e você estará na Estrada do Capuava. Siga sempre nessa estrada e não se preocupe, pois ela mudará de nome umas duas vezes. </p>
+              <p>Serão quase 6 km até o local. Se você quiser ser bem detalhista, zere o marcador de quilometragem no início da estrada do Capuava e siga as seguinte referências:</p>
               <p>300 m - Gera Força</p>
               <p>700 m - Residencial Jd. Algarve</p>
               <p>2.300 m - Academia Tenis Ranch</p>
