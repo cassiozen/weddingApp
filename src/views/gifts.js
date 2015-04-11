@@ -47,7 +47,7 @@ module.exports = React.createClass({
     PayPalMobile.renderSinglePaymentUI(payment,
       (payment)=>{ 
         navigator.notification.alert(
-            'Oba, obrigado pelo presente!',
+            'Muito obrigado por tornar nossa lua de mel mais especial!',
             ()=>{this.showView("home", "fade", null);},
             'Obrigado',
             'Ok'
@@ -58,6 +58,12 @@ module.exports = React.createClass({
   },
 
   render() {
+    textBlock = {
+      padding: '10px',
+      backgroundColor:'#81bce0',
+      color: '#ffffff',
+      fontSize: '15px'
+    };
     giftItems = gifts.map((gift, index)=>(
       <GiftItem product={gift} styleNum={index%2==0? 0 : 1} onBuyClick={this.onBuyClick} />
     ));
@@ -67,7 +73,9 @@ module.exports = React.createClass({
           <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
         </UI.Headerbar>
         <UI.FlexBlock scrollable={true}>
+          <div style={textBlock}>Como nós já moramos juntos há dois anos, já temos nossas panelas queridas, então agradeceríamos se você pudesse audar a tornar nossa lua de mel mais especial.</div>
           {giftItems}
+          <div style={textBlock}>Se preferir, você pode fazer um depósito de qualquer valor na nossa conta conjunta:<br/>Melina Pereira Martins<br/>CPF: 337.773.078-82<br/>Banco Bradesco<br/>agência 1991<br/>conta corrente 09644</div>
         </UI.FlexBlock>
         
       </UI.FlexLayout>

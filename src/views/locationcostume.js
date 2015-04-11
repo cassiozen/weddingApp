@@ -25,6 +25,10 @@ module.exports = React.createClass({
           <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
         </UI.Headerbar>
         <UI.FlexBlock scrollable={true}>
+          <div style={headerStyle}><img src="img/location_costume/header_costume.png" style={headerImageStyle} width="325" /></div>
+          <div style={{textAlign:'center', marginBottom:'18px'}}>
+            <span className="red-text">Social Completo</span><br/>
+          </div>
           <div style={headerStyle}><img src="img/location_costume/header_location.png" style={headerImageStyle} width="325" /></div>
           <div style={{textAlign:'center', marginBottom:'18px'}}>
             <span className="red-text">Estação Lounge</span><br/>
@@ -49,10 +53,6 @@ module.exports = React.createClass({
               <p>5.400 m - Centro da terceira idade (não, não vamos casar no centro da terceira idade. Siga mais um pouco...)</p>
               <p>5.600 m - a sua direita verá um muro branco e um banner indicativo do número 715 em vermelho</p>
             </div>
-          </div>
-          <div style={headerStyle}><img src="img/location_costume/header_costume.png" style={headerImageStyle} width="325" /></div>
-          <div style={{textAlign:'center', marginBottom:'18px'}}>
-            <span className="red-text">Social Completo</span><br/>
           </div>
         </UI.FlexBlock>
         

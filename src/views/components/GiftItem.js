@@ -13,7 +13,7 @@ module.exports = React.createClass({
   render() {
     itemStyle={
       width: '100%',
-      height: '194px',
+      height: '200px',
       padding: '10px',
       backgroundColor: backgrounds[this.props.styleNum]
     };

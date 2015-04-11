@@ -57,6 +57,20 @@ module.exports = React.createClass({
 
   render() {
     var size = this.getSize();
+    
+    footerStyle={
+      width: '100%',
+      backgroundColor: '#81bce0',
+      position: 'absolute',
+      bottom: '0px',
+      margin: 'auto'
+
+    };
+    footerImageStyle={
+      display: 'block',
+      width: '323px',
+      margin:'auto',
+    };
 
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
@@ -73,11 +87,19 @@ module.exports = React.createClass({
             itemHeightGetter={this.getPageHeight}
             itemGetter={this.renderPage} />
         </Surface>
+        <div ref="footer" style={footerStyle} className="fadeable"><img src="img/more.png" style={footerImageStyle} width="323" /></div>
       </UI.FlexLayout>
     );
   },
 
   renderPage(pageIndex, scrollTop) {
+    if(pageIndex>0){
+      var el = React.findDOMNode(this.refs.footer)
+      if (!el.classList.contains('fade')) {
+        el.classList.add('fade');
+      }
+    }
+    
     var size = this.getSize();
     var article = articles[pageIndex % articles.length];
     var pageScrollTop = pageIndex * this.getPageHeight() - scrollTop;
