@@ -32,9 +32,6 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 		293945E6ECEA468181D886D0 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E78EB1918A744DB821735A5 /* CDVDevice.m */; };
-		332898F3881A449CA531A52E /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B3A546844D4822AC7FB781 /* CDVFile.m */; };
-		31F2C8975D5B491897A1AD4B /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6316C33724CF4932E3638 /* CDVLocalFilesystem.m */; };
-		DBBD1C28D6074C7CBB0A4098 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 682AC4B47ACB40968612077D /* CDVAssetLibraryFilesystem.m */; };
 		4C27DE3D437F461FA80A1770 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 930FDFC955E946B0A4203247 /* CDVLogger.m */; };
 		3181A818891D4A8B8E2138DC /* PayPalMobileCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8032D59CCB5D415BAE2C1010 /* PayPalMobileCordovaPlugin.m */; };
 		AC797E294DE04307A5280403 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD8839CA3E1456DA7243A4D /* libPayPalMobile.a */; };
@@ -107,12 +104,6 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "WeddingApp/config.xml"; sourceTree = "<group>"; };
 		4E78EB1918A744DB821735A5 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		7C183A642A9B479AA69069CA /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		F3B3A546844D4822AC7FB781 /* CDVFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVFile.m"; path = "org.apache.cordova.file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		2CC6316C33724CF4932E3638 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocalFilesystem.m"; path = "org.apache.cordova.file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		682AC4B47ACB40968612077D /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVAssetLibraryFilesystem.m"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		7F92244F10E6433DAB36C523 /* CDVFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFile.h"; path = "org.apache.cordova.file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		4C6D564E974D443CBD21056F /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocalFilesystem.h"; path = "org.apache.cordova.file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		70647CE9FB18409A825ECFB3 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		930FDFC955E946B0A4203247 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		AAD851E355954E66B5DBF214 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8032D59CCB5D415BAE2C1010 /* PayPalMobileCordovaPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PayPalMobileCordovaPlugin.m"; path = "com.paypal.cordova.mobilesdk/PayPalMobileCordovaPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
@@ -291,12 +282,6 @@
 			children = (
 				4E78EB1918A744DB821735A5 /* CDVDevice.m */,
 				7C183A642A9B479AA69069CA /* CDVDevice.h */,
-				F3B3A546844D4822AC7FB781 /* CDVFile.m */,
-				2CC6316C33724CF4932E3638 /* CDVLocalFilesystem.m */,
-				682AC4B47ACB40968612077D /* CDVAssetLibraryFilesystem.m */,
-				7F92244F10E6433DAB36C523 /* CDVFile.h */,
-				4C6D564E974D443CBD21056F /* CDVLocalFilesystem.h */,
-				70647CE9FB18409A825ECFB3 /* CDVAssetLibraryFilesystem.h */,
 				930FDFC955E946B0A4203247 /* CDVLogger.m */,
 				AAD851E355954E66B5DBF214 /* CDVLogger.h */,
 				8032D59CCB5D415BAE2C1010 /* PayPalMobileCordovaPlugin.m */,
@@ -480,9 +465,6 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				293945E6ECEA468181D886D0 /* CDVDevice.m in Sources */,
-				332898F3881A449CA531A52E /* CDVFile.m in Sources */,
-				31F2C8975D5B491897A1AD4B /* CDVLocalFilesystem.m in Sources */,
-				DBBD1C28D6074C7CBB0A4098 /* CDVAssetLibraryFilesystem.m in Sources */,
 				4C27DE3D437F461FA80A1770 /* CDVLogger.m in Sources */,
 				3181A818891D4A8B8E2138DC /* PayPalMobileCordovaPlugin.m in Sources */,
 				AC797E294DE04307A5280403 /* libPayPalMobile.a in Frameworks */,
