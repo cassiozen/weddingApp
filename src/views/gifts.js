@@ -42,6 +42,19 @@ module.exports = React.createClass({
 
   onBuyClick(item){
     console.log(item);
+    var paymentDetails = new PayPalPaymentDetails(item.value, "0.00", "0.00");
+    var payment = new PayPalPayment(item.value, "BRL", item.name, "Sale", paymentDetails);
+    PayPalMobile.renderSinglePaymentUI(payment,
+      (payment)=>{ 
+        navigator.notification.alert(
+            'Oba, obrigado pelo presente!',
+            ()=>{this.showView("home", "fade", null);},
+            'Obrigado',
+            'Ok'
+        );
+        console.log("payment success: " + JSON.stringify(payment, null, 4)); 
+      },
+      (result)=>{console.log(result); });
   },
 
   render() {

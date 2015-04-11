@@ -54,19 +54,71 @@ var App = React.createClass({
   }
 });
 
-function startApp() {
-  injectTapEventPlugin();
-  React.render(<App />, document.body);
-}
 
-function onDeviceReady() {
-  StatusBar.styleDefault();
-  startApp();
-}
 
-if (typeof cordova === 'undefined') {
-  startApp();
-  TouchEmulator();
-} else {
-  document.addEventListener('deviceready', onDeviceReady, false);
-}
+
+
+
+///
+
+
+///
+
+
+var app = {
+   // Application Constructor
+   initialize: function() {
+      if (typeof cordova === 'undefined') {
+        TouchEmulator();
+        injectTapEventPlugin();
+        React.render(<App />, document.body);
+      } else {
+        this.bindEvents();
+      }
+       
+   },
+   // Bind Event Listeners
+   //
+   // Bind any events that are required on startup. Common events are:
+   // 'load', 'deviceready', 'offline', and 'online'.
+   bindEvents: function() {
+       document.addEventListener('deviceready', this.onDeviceReady, false);
+   },
+   // deviceready Event Handler
+   //
+   // The scope of 'this' is the event. In order to call the 'receivedEvent'
+   // function, we must explicity call 'app.receivedEvent(...);'
+   onDeviceReady: function() {
+       app.receivedEvent('deviceready');
+   },
+   // Update DOM on a Received Event
+   receivedEvent: function(id) {
+       console.log('Received Event: ' + id);
+       // Start the App
+       injectTapEventPlugin();
+       React.render(<App />, document.body);
+       // start to initialize PayPalMobile library
+       app.initPaymentUI();
+   },
+   initPaymentUI : function () {
+     var clientIDs = {
+       "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
+       "PayPalEnvironmentSandbox": "AVfZdY6EhPVysfE3pg5svkANHdhI_NJ5n7wRv8eF8GrIn9B51A7-amZP5liGqKRKCVObw78H3NyeKnTB"
+     };
+     PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
+
+   },
+   configuration : function () {
+     // for more options see `paypal-mobile-js-helper.js`
+     var config = new PayPalConfiguration({merchantName: "Casamento Caco & Mel", merchantPrivacyPolicyURL: "https://mytestshop.com/policy", merchantUserAgreementURL: "https://mytestshop.com/agreement", languageOrLocale: "pt_BR"});
+     return config;   
+   },
+
+   onPayPalMobileInit : function() {
+     // must be called
+     // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
+     PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(), ()=>{console.log("Paypal Initiated")});
+   }
+};
+
+app.initialize();
