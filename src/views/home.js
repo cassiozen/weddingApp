@@ -47,7 +47,6 @@ module.exports = React.createClass({
 
   componentDidMount() {
     this.createParticles();
-    console.log(this.props)
   },
 
   componentWillUnmount() {
