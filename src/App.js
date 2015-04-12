@@ -5,6 +5,7 @@ var classnames = require('classnames');
 var Touchstone = require('touchstonejs');
 var TouchEmulator = require('./libs/touch-emulator');
 var injectTapEventPlugin = require("react-tap-event-plugin");
+var Parse = require('parse').Parse;
 
 var mui = require('material-ui'),
   LeftNav = mui.LeftNav,
@@ -25,7 +26,6 @@ var menuItems = [
   { route: 'rsvp', text: 'RSVP', number: '❯' },
   { route: 'gifts', text: 'Lista de Presentes', number: '❯' },
   { route: 'sponsors', text: 'Padrinhos', number: '❯' },
-  { route: 'home', text: 'Peça sua música!', number: '❯' },
 ];
 
 var App = React.createClass({
@@ -47,6 +47,11 @@ var App = React.createClass({
       online: this.state.online,
       toggleLeftBar: this.toggleLeftBar
     };
+  },
+
+  componentWillMount() {
+    console.log("Oi", Parse)
+    Parse.initialize("nAaQd2GKodtQQzUWwSyVkxzORuLC6SJ7GkMwy1fx", "0OVs3ueEyYMR0HUabA9wIH6AiBBy1wQ3rwPWnXTh");
   },
 
   toggleLeftBar() {

@@ -17,7 +17,7 @@ var articles = [
   },
   {
     title: 'Dete e Sérgio',
-    excerpt: 'São os pais do Cássio,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
+    excerpt: 'São os pais do Cássio, lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum arcu.',
     imageUrl: 'img/sponsors/dete_sergio.jpg'
   },
   {
@@ -27,7 +27,7 @@ var articles = [
   },
   {
     title: 'Wagner e Adriana',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
+    excerpt: 'Wagner é o primo que segurou o Cássio no colo e Adri está na família desde sempre (afinal de contas os dois estão juntos praticamente desde crianças - foram 15 anos de namoro!). Estiveram sempre presentes em momentos importantes da vida do Cássio, nas momentos difíceis e, claro, nos momentos felizes (que não foram poucos, incluindo aqui as madrugadas na fila de Interlagos pra ver o Senna vencer.)',
     imageUrl: 'img/sponsors/adri_wagner.jpg'
   },
   {
@@ -37,7 +37,7 @@ var articles = [
   },
   {
     title: 'Lucas e Wagner',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
+    excerpt: 'Lucas era o colega de trabalho que virou inspiração que virou amigo que virou sócio (E pensa que é fácil o relacionamento com sócio?) O Wagner é a gentileza e a alegria em pessoa, e sempre participou da caminhada desses dois. Como o Lucas foi o primeiro a saber da Mel, nada mais justo do que eles estarem dois anos e pouco depois aqui. Podem contar com a gente pra tudo, porque sabemos que podemos contar com vocês.',
     imageUrl: 'img/sponsors/lucas_wagner.jpg'
   },
   {    
@@ -47,7 +47,7 @@ var articles = [
   },
   {
     title: 'Fernando e Eliana',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
+    excerpt: 'Se você está lendo isso foi porque a Li emprestou seu talento de designer pro nosso convite e App. E se hoje ele é conhecido como Mega-Drive foi porque o Cássio o apresentou anos atrás numa agência ressaltando não seu currículo (nem seus olhos azuis) mas o fato de ter programado jogos para o console de mesmo nome. Dizem que o Cássio e o Fernando parecem irmãos que fazem birra e provocações entre sí, e a verdade é que depois de projetos, cervejas, palestras, bikes e negócios juntos, a brincadeira não está longe da verdade.',
     imageUrl: 'img/sponsors/eli_mega.jpg'
   },
 ];
