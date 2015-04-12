@@ -75,7 +75,7 @@ module.exports = React.createClass({
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
         <UI.Headerbar label="Padrinhos" className="red">
-          <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
+          <UI.HeaderbarButton icon="ion-navicon-round" onTap={this.props.toggleLeftBar} />
         </UI.Headerbar>
         <Surface top={44} left={0} width={size.width} height={size.height-44}>
           <ListView

@@ -74,7 +74,7 @@ module.exports = React.createClass({
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
         <UI.Headerbar label="Lista de Presentes" className="red">
-          <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
+          <UI.HeaderbarButton icon="ion-navicon-round" onTap={this.props.toggleLeftBar} />
         </UI.Headerbar>
         <UI.FlexBlock scrollable={true}>
           <div style={textBlock}>Como nós já moramos juntos há dois anos, já temos nossas panelas queridas, então agradeceríamos se você pudesse audar a tornar nossa lua de mel mais especial.</div>

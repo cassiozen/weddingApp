@@ -22,7 +22,7 @@ module.exports = React.createClass({
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
         <UI.Headerbar label="Local da Festa e Traje" className="red">
-          <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
+          <UI.HeaderbarButton icon="ion-navicon-round" onTap={this.props.toggleLeftBar} />
         </UI.Headerbar>
         <UI.FlexBlock scrollable={true}>
           <div style={headerStyle}><img src="img/location_costume/header_costume.png" style={headerImageStyle} width="325" /></div>

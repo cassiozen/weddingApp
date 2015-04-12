@@ -6,10 +6,6 @@ var React = require('react'),
     Particles = require('../libs/particles').Particles,
     ParticleAnimation = require('../libs/particles').ParticleAnimation;
 
-var mui = require('material-ui'),
-  LeftNav = mui.LeftNav,
-  MenuItem = mui.MenuItem;
-
 module.exports = React.createClass({
   mixins: [Navigation],
 
@@ -51,20 +47,11 @@ module.exports = React.createClass({
 
   componentDidMount() {
     this.createParticles();
+    console.log(this.props)
   },
 
   componentWillUnmount() {
     ParticleAnimation.removeFrameRenderers();
-  },
-
-  toggleLeftBar() {
-    this.refs.leftNav.toggle();
-  },
-
-  onLeftNavChange(e, key, payload) {
-    state = {}
-    state[payload.route  + '_class'] = "view " + payload.route;
-    this.showView(payload.route, "fade", null, state);
   },
 
   render() {
@@ -80,58 +67,20 @@ module.exports = React.createClass({
     canvasStyle={
       position:'absolute'
     };
-
-    menuHeaderStyle={
-      width: '100%',
-      backgroundColor: '#d8383b'
-    };
-    menuImageStyle={
-      display: 'block',
-      width: '99px',
-      margin:'auto',
-    };
-
-    menuItems = [
-      { route: 'locationcostume', text: 'Local da Festa e Traje', number: '❯'},
-      { route: 'rsvp', text: 'RSVP', number: '❯' },
-      { route: 'gifts', text: 'Lista de Presentes', number: '❯' },
-      { route: 'sponsors', text: 'Padrinhos', number: '❯' },
-      { route: 'home', text: 'Peça sua música!', number: '❯' },
-    ];
-
-    header = <div style={menuHeaderStyle}><img style={menuImageStyle} src="img/menu_header.png" width="99" /></div>;
+ 
 
     return (
-      <div>
-        <UI.FlexLayout className={this.props.viewClassName}>
-          <UI.Headerbar label="Nosso Casamento" className="red">
-            <UI.HeaderbarButton icon="ion-navicon-round" onTap={this.toggleLeftBar} />
-          </UI.Headerbar>
-          <UI.FlexBlock className="base-view">
-            <div style={style}>
-              <canvas id="particles-canvas" ref="canvas" style={canvasStyle}></canvas>
-              <img src="img/nhamas.png" width="345" style={canvasStyle} />            
-            </div>
-          </UI.FlexBlock>
-        </UI.FlexLayout>
-        
-        <LeftNav 
-          ref="leftNav"
-          docked={false}
-          isInitiallyOpen={false}
-          header={header}
-          menuItems={menuItems}
-          onChange={this.onLeftNavChange} />
-      </div>
+      <UI.FlexLayout className={this.props.viewClassName}>
+        <UI.Headerbar label="Nosso Casamento" className="red">
+          <UI.HeaderbarButton icon="ion-navicon-round" onTap={this.props.toggleLeftBar} />
+        </UI.Headerbar>
+        <UI.FlexBlock className="base-view">
+          <div style={style}>
+            <canvas id="particles-canvas" ref="canvas" style={canvasStyle}></canvas>
+            <img src="img/nhamas.png" width="345" style={canvasStyle} />            
+          </div>
+        </UI.FlexBlock>
+      </UI.FlexLayout>
     );
   }
 });
-
-
-// <UI.FlexBlock className="base-view">
-  
-//   <Link component="div" to="sponsors" viewTransition="show-from-right">
-//     Sponsors
-//   </Link>
-  
-// </UI.FlexBlock>

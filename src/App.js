@@ -6,6 +6,9 @@ var Touchstone = require('touchstonejs');
 var TouchEmulator = require('./libs/touch-emulator');
 var injectTapEventPlugin = require("react-tap-event-plugin");
 
+var mui = require('material-ui'),
+  LeftNav = mui.LeftNav,
+  MenuItem = mui.MenuItem;
 
 var views = {
   // app
@@ -15,6 +18,15 @@ var views = {
   'sponsors': require('./views/sponsors'),
   'locationcostume': require('./views/locationcostume'),
 };
+
+var menuItems = [
+  { route: 'home', text: 'Convite', number: '❯'},
+  { route: 'locationcostume', text: 'Local da Festa e Traje', number: '❯'},
+  { route: 'rsvp', text: 'RSVP', number: '❯' },
+  { route: 'gifts', text: 'Lista de Presentes', number: '❯' },
+  { route: 'sponsors', text: 'Padrinhos', number: '❯' },
+  { route: 'home', text: 'Peça sua música!', number: '❯' },
+];
 
 var App = React.createClass({
   mixins: [Touchstone.createApp(views)],
@@ -31,8 +43,19 @@ var App = React.createClass({
 
   getViewProps() {
     return {
-      online: this.state.online
+      online: this.state.online,
+      toggleLeftBar: this.toggleLeftBar
     };
+  },
+
+  toggleLeftBar() {
+    this.refs.leftNav.toggle();
+  },
+
+  onLeftNavChange(e, key, payload) {
+    state = {}
+    state[payload.route  + '_class'] = "view " + payload.route;
+    this.showView(payload.route, "fade", null, state);
   },
   
   gotoDefaultView() {
@@ -45,11 +68,31 @@ var App = React.createClass({
       'is-native-app': this.state.isNativeApp
     });
 
+    var menuHeaderStyle={
+      width: '100%',
+      backgroundColor: '#d8383b'
+    };
+
+    var menuImageStyle={
+      display: 'block',
+      width: '99px',
+      margin:'auto',
+    };
+
+    var header = <div style={menuHeaderStyle}><img style={menuImageStyle} src="img/menu_header.png" width="99" /></div>;
+
     return (
       <div className={appWrapperClassName}>
         <ReactCSSTransitionGroup transitionName={this.state.viewTransition.name} transitionEnter={this.state.viewTransition.in} transitionLeave={this.state.viewTransition.out} className="view-wrapper" component="div">
           {this.getCurrentView()}
         </ReactCSSTransitionGroup>
+        <LeftNav 
+          ref="leftNav"
+          docked={false}
+          isInitiallyOpen={false}
+          header={header}
+          menuItems={menuItems}
+          onChange={this.onLeftNavChange} />
       </div>
     );
   }
