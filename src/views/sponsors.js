@@ -17,7 +17,7 @@ var articles = [
   },
   {
     title: 'Dete e Sérgio',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
+    excerpt: 'São os pais do Cássio,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum auctor arcu.',
     imageUrl: 'img/sponsors/dete_sergio.jpg'
   },
   {
@@ -74,7 +74,7 @@ module.exports = React.createClass({
 
     return (
       <UI.FlexLayout className={this.props.viewClassName}>
-        <UI.Headerbar label="Pais & Padrinhos" className="red">
+        <UI.Headerbar label="Padrinhos" className="red">
           <UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
         </UI.Headerbar>
         <Surface top={44} left={0} width={size.width} height={size.height-44}>

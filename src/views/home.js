@@ -93,9 +93,9 @@ module.exports = React.createClass({
 
     menuItems = [
       { route: 'locationcostume', text: 'Local da Festa e Traje', number: '❯'},
-      { route: 'home', text: 'RSVP', number: '❯' },
+      { route: 'rsvp', text: 'RSVP', number: '❯' },
       { route: 'gifts', text: 'Lista de Presentes', number: '❯' },
-      { route: 'sponsors', text: 'Pais & Padrinhos', number: '❯' },
+      { route: 'sponsors', text: 'Padrinhos', number: '❯' },
       { route: 'home', text: 'Peça sua música!', number: '❯' },
     ];
 

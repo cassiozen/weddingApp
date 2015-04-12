@@ -40,6 +40,10 @@ var gifts = [
 module.exports = React.createClass({
   mixins: [Navigation],
 
+  componentWillMount(){
+    console.log("GIFTS!!!");
+  },
+
   onBuyClick(item){
     console.log(item);
     var paymentDetails = new PayPalPaymentDetails(item.value, "0.00", "0.00");
