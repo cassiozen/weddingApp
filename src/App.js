@@ -22,7 +22,7 @@ var App = React.createClass({
     var initialState = {
       currentView: 'home',
       online: true,
-      isNativeApp: (typeof cordova !== 'undefined')
+      isNativeApp: (typeof cordova !== 'undefined' && device.platform === "iOS")
     };
 
     return initialState;
@@ -94,6 +94,9 @@ var app = {
    // Update DOM on a Received Event
    receivedEvent: function(id) {
        console.log('Received Event: ' + id);
+       if(device.platform === "iOS"){
+        StatusBar.styleDefault();
+       }
        // Start the App
        injectTapEventPlugin();
        React.render(<App />, document.body);
