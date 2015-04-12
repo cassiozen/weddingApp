@@ -35,6 +35,7 @@ var App = React.createClass({
     var initialState = {
       currentView: 'home',
       online: true,
+      currentViewIndex: 0,
       isNativeApp: (typeof cordova !== 'undefined' && device.platform === "iOS")
     };
 
@@ -53,9 +54,10 @@ var App = React.createClass({
   },
 
   onLeftNavChange(e, key, payload) {
-    state = {}
-    state[payload.route  + '_class'] = "view " + payload.route;
-    this.showView(payload.route, "fade", null, state);
+    this.state.currentViewIndex = key;
+    viewState = {}
+    viewState[payload.route  + '_class'] = "view " + payload.route;
+    this.showView(payload.route, "fade", null, viewState);
   },
   
   gotoDefaultView() {
@@ -92,6 +94,7 @@ var App = React.createClass({
           isInitiallyOpen={false}
           header={header}
           menuItems={menuItems}
+          selectedIndex={this.state.currentViewIndex}
           onChange={this.onLeftNavChange} />
       </div>
     );

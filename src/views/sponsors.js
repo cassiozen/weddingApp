@@ -63,7 +63,8 @@ module.exports = React.createClass({
       backgroundColor: '#81bce0',
       position: 'absolute',
       bottom: '0px',
-      margin: 'auto'
+      margin: 'auto',
+      pointerEvents: 'none'
 
     };
     footerImageStyle={
