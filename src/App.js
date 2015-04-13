@@ -50,7 +50,7 @@ var App = React.createClass({
   },
 
   componentWillMount() {
-    console.log("Oi", Parse)
+    console.log("Opa");
     Parse.initialize("nAaQd2GKodtQQzUWwSyVkxzORuLC6SJ7GkMwy1fx", "0OVs3ueEyYMR0HUabA9wIH6AiBBy1wQ3rwPWnXTh");
   },
 

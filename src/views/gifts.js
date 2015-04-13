@@ -1,7 +1,8 @@
 var React = require('react'),
     GiftItem = require('./components/GiftItem');
     Navigation = require('touchstonejs').Navigation,
-    UI = require('touchstonejs').UI;
+    UI = require('touchstonejs').UI,
+    Parse = require('parse').Parse;
 
 
 var gifts = [
@@ -52,7 +53,9 @@ module.exports = React.createClass({
             'Obrigado',
             'Ok'
         );
-        console.log("payment success: " + JSON.stringify(payment, null, 4)); 
+        var PaymentObject = Parse.Object.extend("Gifts");
+        var pamentObject = new PaymentObject();
+        pamentObject.save(payment.response).then((object) => { console.log("Payment Registered") });
       },
       (result)=>{console.log(result); });
   },

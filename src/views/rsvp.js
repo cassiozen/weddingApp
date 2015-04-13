@@ -1,6 +1,7 @@
 var React = require('react'),
     Tappable = require('react-tappable'),
     Navigation = require('touchstonejs').Navigation,
+    LabelSelect = require('./components/LabelSelect'),
     UI = require('touchstonejs').UI,
     Parse = require('parse').Parse;
 
@@ -17,7 +18,7 @@ module.exports = React.createClass({
 
   handleGoingChange(going) {
     this.setState({
-      going: going
+      going: going == 'true'
     });
   },
 
@@ -28,11 +29,10 @@ module.exports = React.createClass({
   },
   
   handleFormSubmit() {
-    this.state.loading = true;
     var RSVPObject = Parse.Object.extend("RSVP");
     var rsvpObject = new RSVPObject();
     rsvpObject.save({name: this.state.name, going: this.state.going}).then((object) => {
-      this.state.loading = false;
+      this.setState({loading: false});
       if(this.state.going){
         navigator.notification.alert(
             'Obrigado por nos avisar, encontramos você lá!',
@@ -49,6 +49,11 @@ module.exports = React.createClass({
         );
       }
     });
+    this.setState({loading: true});
+  },
+
+  componentWillMount(){
+    window.Parse = Parse;
   },
 
   render() {
@@ -77,7 +82,7 @@ module.exports = React.createClass({
           <div className="panel">
             <UI.LabelInput label="Nome" value={this.state.name} onChange={this.handleNameChange} />
 
-            <UI.LabelSelect label="Você Vai?" value={this.state.going} onChange={this.handleGoingChange} options={[
+            <LabelSelect label="Você Vai?" value={this.state.going} onChange={this.handleGoingChange} options={[
               { label: 'Sim!',    value: true },
               { label: 'Infelizmente não vou poder.',  value: false }
             ]} />

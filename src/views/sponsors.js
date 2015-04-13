@@ -17,7 +17,7 @@ var articles = [
   },
   {
     title: 'Dete e Sérgio',
-    excerpt: 'São os pais do Cássio, lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus euismod urna eget imperdiet. Curabitur bibendum urna condimentum varius iaculis. Aliquam vel tempor turpis. Phasellus pretium auctor nisl, vitae interdum odio placerat vel. Ut mollis eu risus nec facilisis. In malesuada vitae ex sed aliquam. Integer luctus tincidunt urna elementum ornare. Maecenas rutrum arcu.',
+    excerpt: 'São os pais do Cássio, e ele tem os melhores pais que jamais poderia desejar. No percorrer dos caminhos da vida do Cássio, na satisfação de suas conquistas, na decepção de suas derrotas, na motivação de suas lutas, no desempenho de suas atitudes, eles sempre foram a base, a inspiração e a força de toda a ação.',
     imageUrl: 'img/sponsors/dete_sergio.jpg'
   },
   {
