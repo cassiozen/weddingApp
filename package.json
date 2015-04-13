@@ -13,9 +13,11 @@
     "material-ui": "^0.7.3",
     "parse": "^1.4.2",
     "react": "^0.13.1",
+    "react-autocomplete": "0.0.2",
     "react-canvas": "0.0.1",
     "react-tap-event-plugin": "^0.1.6",
     "react-tappable": "^0.2.5",
+    "react-typeahead": "^1.0.3",
     "superagent": "^0.21.0",
     "touchstonejs": "^0.1.2",
     "underscore": "^1.7.0"

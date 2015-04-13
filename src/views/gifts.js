@@ -42,7 +42,6 @@ module.exports = React.createClass({
   mixins: [Navigation],
 
   onBuyClick(item){
-    console.log(item);
     var paymentDetails = new PayPalPaymentDetails(item.value, "0.00", "0.00");
     var payment = new PayPalPayment(item.value, "BRL", item.name, "Sale", paymentDetails);
     PayPalMobile.renderSinglePaymentUI(payment,
@@ -55,7 +54,7 @@ module.exports = React.createClass({
         );
         var PaymentObject = Parse.Object.extend("Gifts");
         var pamentObject = new PaymentObject();
-        pamentObject.save(payment.response).then((object) => { console.log("Payment Registered") });
+        pamentObject.save(payment).then((object) => { console.log("Payment Registered") });
       },
       (result)=>{console.log(result); });
   },

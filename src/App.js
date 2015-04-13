@@ -13,6 +13,7 @@ var mui = require('material-ui'),
 
 var views = {
   // app
+  'gate': require('./views/gate'),
   'home': require('./views/home'),
   'rsvp': require('./views/rsvp'),
   'gifts': require('./views/gifts'),
@@ -33,7 +34,7 @@ var App = React.createClass({
 
   getInitialState() {
     var initialState = {
-      currentView: 'home',
+      currentView: 'gate',
       online: true,
       currentViewIndex: 0,
       isNativeApp: (typeof cordova !== 'undefined' && device.platform === "iOS")
@@ -50,7 +51,10 @@ var App = React.createClass({
   },
 
   componentWillMount() {
-    console.log("Opa");
+    couple = localStorage.getItem("couple");
+    if(couple){
+      this.setState({currentView:'home'});
+    }
     Parse.initialize("nAaQd2GKodtQQzUWwSyVkxzORuLC6SJ7GkMwy1fx", "0OVs3ueEyYMR0HUabA9wIH6AiBBy1wQ3rwPWnXTh");
   },
 
@@ -66,7 +70,7 @@ var App = React.createClass({
   },
   
   gotoDefaultView() {
-    this.showView('home', 'fade');
+    this.showView(this.state.currentView, 'fade');
   },
 
   render() {
