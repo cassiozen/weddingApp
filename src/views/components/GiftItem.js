@@ -44,7 +44,6 @@ module.exports = React.createClass({
         <div className="gift-item__description">
           <div className="red-text">{this.props.product.name}</div>
           <div className="blue-text">R$ {parseInt(this.props.product.value)},00</div>
-          <Tappable onTap={this.props.onBuyClick.bind(null, this.props.product)} component="div" className="gift-item__buy-button"></Tappable>
         </div>
         {rightImage}
       </div>

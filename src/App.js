@@ -157,27 +157,27 @@ var app = {
        injectTapEventPlugin();
        React.render(<App />, document.body);
        // start to initialize PayPalMobile library
-       app.initPaymentUI();
+       //app.initPaymentUI();
    },
-   initPaymentUI : function () {
-     var clientIDs = {
-       "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
-       "PayPalEnvironmentSandbox": "AVfZdY6EhPVysfE3pg5svkANHdhI_NJ5n7wRv8eF8GrIn9B51A7-amZP5liGqKRKCVObw78H3NyeKnTB"
-     };
-     PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
+   // initPaymentUI : function () {
+   //   var clientIDs = {
+   //     "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
+   //     "PayPalEnvironmentSandbox": "AVfZdY6EhPVysfE3pg5svkANHdhI_NJ5n7wRv8eF8GrIn9B51A7-amZP5liGqKRKCVObw78H3NyeKnTB"
+   //   };
+   //   PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
 
-   },
+   // },
    configuration : function () {
      // for more options see `paypal-mobile-js-helper.js`
      var config = new PayPalConfiguration({merchantName: "Casamento Caco & Mel", merchantPrivacyPolicyURL: "https://mytestshop.com/policy", merchantUserAgreementURL: "https://mytestshop.com/agreement", languageOrLocale: "pt_BR"});
      return config;   
    },
 
-   onPayPalMobileInit : function() {
-     // must be called
-     // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
-     PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(), ()=>{console.log("Paypal Initiated")});
-   }
+   // onPayPalMobileInit : function() {
+   //   // must be called
+   //   // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
+   //   PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(), ()=>{console.log("Paypal Initiated")});
+   // }
 };
 
 app.initialize();
