@@ -28,6 +28,8 @@ var menuItems = [
   { route: 'sponsors', text: 'Padrinhos', number: '❯' },
 ];
 
+var autoMenuTimer = null;
+
 var App = React.createClass({
   mixins: [Touchstone.createApp(views)],
 
@@ -54,8 +56,18 @@ var App = React.createClass({
     Parse.initialize("nAaQd2GKodtQQzUWwSyVkxzORuLC6SJ7GkMwy1fx", "0OVs3ueEyYMR0HUabA9wIH6AiBBy1wQ3rwPWnXTh");
   },
 
+  componentDidMount() {
+    autoMenuTimer = setTimeout(()=>{
+      this.toggleLeftBar()
+    }, 5000);
+  },
+
   toggleLeftBar() {
     this.refs.leftNav.toggle();
+    if(autoMenuTimer!==null){
+      clearTimeout(autoMenuTimer);
+      autoMenuTimer = null;
+    }
   },
 
   onLeftNavChange(e, key, payload) {
@@ -153,27 +165,27 @@ var app = {
        injectTapEventPlugin();
        React.render(<App />, document.body);
        // start to initialize PayPalMobile library
-       app.initPaymentUI();
+       //app.initPaymentUI();
    },
-   initPaymentUI : function () {
-     var clientIDs = {
-       "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
-       "PayPalEnvironmentSandbox": "AVfZdY6EhPVysfE3pg5svkANHdhI_NJ5n7wRv8eF8GrIn9B51A7-amZP5liGqKRKCVObw78H3NyeKnTB"
-     };
-     PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
+   // initPaymentUI : function () {
+   //   var clientIDs = {
+   //     "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID",
+   //     "PayPalEnvironmentSandbox": "AVfZdY6EhPVysfE3pg5svkANHdhI_NJ5n7wRv8eF8GrIn9B51A7-amZP5liGqKRKCVObw78H3NyeKnTB"
+   //   };
+   //   PayPalMobile.init(clientIDs, app.onPayPalMobileInit);
 
-   },
+   // },
    configuration : function () {
      // for more options see `paypal-mobile-js-helper.js`
      var config = new PayPalConfiguration({merchantName: "Casamento Caco & Mel", merchantPrivacyPolicyURL: "https://mytestshop.com/policy", merchantUserAgreementURL: "https://mytestshop.com/agreement", languageOrLocale: "pt_BR"});
      return config;   
    },
 
-   onPayPalMobileInit : function() {
-     // must be called
-     // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
-     PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(), ()=>{console.log("Paypal Initiated")});
-   }
+   // onPayPalMobileInit : function() {
+   //   // must be called
+   //   // use PayPalEnvironmentNoNetwork mode to get look and feel of the flow
+   //   PayPalMobile.prepareToRender("PayPalEnvironmentSandbox", app.configuration(), ()=>{console.log("Paypal Initiated")});
+   // }
 };
 
 app.initialize();
