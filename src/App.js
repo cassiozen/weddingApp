@@ -57,6 +57,7 @@ var App = React.createClass({
   },
 
   componentDidMount() {
+    document.addEventListener("backbutton", this.toggleLeftBar);
     autoMenuTimer = setTimeout(()=>{
       this.toggleLeftBar()
     }, 5000);
@@ -154,6 +155,11 @@ var app = {
    // function, we must explicity call 'app.receivedEvent(...);'
    onDeviceReady: function() {
        app.receivedEvent('deviceready');
+       if (typeof device != "undefined" && device.platform == "Android")
+       {
+           navigator.app.overrideBackbutton(true);
+       }
+       document.addEventListener("backbutton", ()=>{return false}, true);
    },
    // Update DOM on a Received Event
    receivedEvent: function(id) {
@@ -164,6 +170,7 @@ var app = {
        // Start the App
        injectTapEventPlugin();
        React.render(<App />, document.body);
+
        // start to initialize PayPalMobile library
        //app.initPaymentUI();
    },

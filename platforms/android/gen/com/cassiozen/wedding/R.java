@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.cassio.wedding;
+package com.cassiozen.wedding;
 
 public final class R {
     public static final class array {
