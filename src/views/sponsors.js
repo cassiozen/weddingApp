@@ -42,12 +42,12 @@ var articles = [
   },
   {    
     title: 'Boléa e Jubinha',
-    excerpt: 'Não dá pra descrever o carinho que temos por esses dois. Não, não é porque moramos no apartamento deles. Nem porque ela praticamente planejou a nossa lua de mel e executou sozinha o chá bar (emprestando inclusive a sua casa). Não é nada disso. É porque na saúde ou na dor de dente, no japonês ou no churrasco, na casa de vocês ou no nosso apartamento (que também é de vocês), nós os amamos!',
+    excerpt: 'Não dá pra descrever o carinho que temos por esses dois. Não, não é porque moramos no apartamento deles. Nem porque ela praticamente planejou a nossa lua de mel e emprestou sua casa pro nosso chá bar. Não é nada disso. É porque na saúde ou na dor de dente, no japonês ou no churrasco, na casa de vocês ou no nosso apartamento (que também é de vocês), nós os amamos!',
     imageUrl: 'img/sponsors/juboleas.jpg'
   },
   {
     title: 'Fernando e Eliana',
-    excerpt: 'Se você está lendo isso foi porque a Li emprestou seu talento de designer pro nosso convite e App. E se hoje ele o Fernando é conhecido como Mega-Drive foi porque o Cássio o apresentou anos atrás numa agência ressaltando não seu currículo (nem seus olhos azuis) mas o fato de ter programado jogos para o console de mesmo nome. Dizem que o Cássio e o Fernando parecem irmãos que fazem birra e provocações entre sí, e a verdade é que depois de projetos, cervejas, palestras, bikes e negócios juntos, a brincadeira não está longe da verdade.',
+    excerpt: 'Se você está lendo isso foi porque a Li emprestou seu talento de designer pro nosso convite e App. E se hoje o Fernando é conhecido como Mega-Drive foi porque o Cássio o apresentou anos atrás numa agência ressaltando não seu currículo (nem seus olhos azuis) mas o fato de ter programado jogos para o console de mesmo nome. Dizem que o Cássio e o Fernando parecem irmãos que fazem birra e provocações entre sí, e a verdade é que depois de projetos, cervejas, palestras, bikes e negócios juntos, a brincadeira não está longe da verdade.',
     imageUrl: 'img/sponsors/eli_mega.jpg'
   },
 ];

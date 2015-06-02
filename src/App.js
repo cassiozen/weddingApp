@@ -13,7 +13,6 @@ var mui = require('material-ui'),
 
 var views = {
   // app
-  'gate': require('./views/gate'),
   'home': require('./views/home'),
   'rsvp': require('./views/rsvp'),
   'gifts': require('./views/gifts'),
@@ -29,12 +28,14 @@ var menuItems = [
   { route: 'sponsors', text: 'Padrinhos', number: '❯' },
 ];
 
+var autoMenuTimer = null;
+
 var App = React.createClass({
   mixins: [Touchstone.createApp(views)],
 
   getInitialState() {
     var initialState = {
-      currentView: 'gate',
+      currentView: 'home',
       online: true,
       currentViewIndex: 0,
       isNativeApp: (typeof cordova !== 'undefined' && device.platform === "iOS")
@@ -51,15 +52,23 @@ var App = React.createClass({
   },
 
   componentWillMount() {
-    couple = localStorage.getItem("couple");
-    if(couple){
-      this.setState({currentView:'home'});
-    }
+    console.log("Opa");
     Parse.initialize("nAaQd2GKodtQQzUWwSyVkxzORuLC6SJ7GkMwy1fx", "0OVs3ueEyYMR0HUabA9wIH6AiBBy1wQ3rwPWnXTh");
+  },
+
+  componentDidMount() {
+    document.addEventListener("backbutton", this.toggleLeftBar);
+    autoMenuTimer = setTimeout(()=>{
+      this.toggleLeftBar()
+    }, 5000);
   },
 
   toggleLeftBar() {
     this.refs.leftNav.toggle();
+    if(autoMenuTimer!==null){
+      clearTimeout(autoMenuTimer);
+      autoMenuTimer = null;
+    }
   },
 
   onLeftNavChange(e, key, payload) {
@@ -70,7 +79,7 @@ var App = React.createClass({
   },
   
   gotoDefaultView() {
-    this.showView(this.state.currentView, 'fade');
+    this.showView('home', 'fade');
   },
 
   render() {
@@ -146,6 +155,11 @@ var app = {
    // function, we must explicity call 'app.receivedEvent(...);'
    onDeviceReady: function() {
        app.receivedEvent('deviceready');
+       if (typeof device != "undefined" && device.platform == "Android")
+       {
+           navigator.app.overrideBackbutton(true);
+       }
+       document.addEventListener("backbutton", ()=>{return false}, true);
    },
    // Update DOM on a Received Event
    receivedEvent: function(id) {
@@ -156,6 +170,7 @@ var app = {
        // Start the App
        injectTapEventPlugin();
        React.render(<App />, document.body);
+
        // start to initialize PayPalMobile library
        //app.initPaymentUI();
    },

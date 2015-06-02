@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.cassio.wedding;
+package com.cassiozen.wedding;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

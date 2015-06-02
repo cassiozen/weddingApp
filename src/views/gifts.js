@@ -42,6 +42,7 @@ module.exports = React.createClass({
   mixins: [Navigation],
 
   onBuyClick(item){
+    // console.log(item);
     // var paymentDetails = new PayPalPaymentDetails(item.value, "0.00", "0.00");
     // var payment = new PayPalPayment(item.value, "BRL", item.name, "Sale", paymentDetails);
     // PayPalMobile.renderSinglePaymentUI(payment,
@@ -54,7 +55,7 @@ module.exports = React.createClass({
     //     );
     //     var PaymentObject = Parse.Object.extend("Gifts");
     //     var pamentObject = new PaymentObject();
-    //     pamentObject.save(payment).then((object) => { console.log("Payment Registered") });
+    //     pamentObject.save(payment.response).then((object) => { console.log("Payment Registered") });
     //   },
     //   (result)=>{console.log(result); });
   },
@@ -64,7 +65,7 @@ module.exports = React.createClass({
       padding: '10px',
       backgroundColor:'#81bce0',
       color: '#ffffff',
-      fontSize: '15px'
+      fontSize: '16px'
     };
     giftItems = gifts.map((gift, index)=>(
       <GiftItem product={gift} styleNum={index%2==0? 0 : 1} onBuyClick={this.onBuyClick} />
@@ -76,7 +77,7 @@ module.exports = React.createClass({
         </UI.Headerbar>
         <UI.FlexBlock scrollable={true}>
           <div style={textBlock}>Como nós já moramos juntos há dois anos, já temos nossas panelas queridas. Então agradeceríamos se você pudesse ajudar a tornar nossa lua de mel mais especial.</div>
-          <div style={textBlock}>Você pode fazer um depósito de qualquer valor na nossa conta conjunta (listamos alguns exemplos na sequência):<br/>Melina Pereira Martins<br/>CPF: 337.773.078-82<br/>Banco Bradesco<br/>agência 1991<br/>conta corrente 09644</div>
+          <div style={textBlock}>Faça um depósito de um dos valores sugeridos (ou de qualquer valor) na nossa conta conjunta:<br/>Melina Pereira Martins<br/>CPF: 337.773.078-82<br/>Banco Bradesco<br/>agência 1991<br/>conta corrente 09644</div>
           {giftItems}
           
         </UI.FlexBlock>
